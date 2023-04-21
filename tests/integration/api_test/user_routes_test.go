@@ -1,8 +1,8 @@
 package api_test
 
 import (
-	"clean-architecture/infrastructure"
-	"clean-architecture/tests/setup"
+	"clean-architecture-api/infrastructure"
+	"clean-architecture-api/tests/setup"
 	"log"
 	"net/http"
 	"net/http/httptest"

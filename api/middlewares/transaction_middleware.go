@@ -1,10 +1,10 @@
 package middlewares
 
 import (
-	"clean-architecture/constants"
-	"clean-architecture/infrastructure"
-	"clean-architecture/lib"
-	"clean-architecture/utils"
+	"clean-architecture-api/constants"
+	"clean-architecture-api/infrastructure"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/utils"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

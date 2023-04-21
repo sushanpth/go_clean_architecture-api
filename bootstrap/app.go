@@ -1,13 +1,13 @@
 package bootstrap
 
 import (
-	"clean-architecture/console"
+	"clean-architecture-api/console"
 
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "clean-architecture",
+	Use:   "clean-architecture-api",
 	Short: "Commander for clean architecture",
 	Long: `
 		This is a command runner or cli for api architecture in golang. 

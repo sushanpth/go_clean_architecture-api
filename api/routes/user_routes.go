@@ -1,11 +1,11 @@
 package routes
 
 import (
-	"clean-architecture/api/controllers"
-	"clean-architecture/api/middlewares"
-	"clean-architecture/constants"
-	"clean-architecture/infrastructure"
-	"clean-architecture/lib"
+	"clean-architecture-api/api/controllers"
+	"clean-architecture-api/api/middlewares"
+	"clean-architecture-api/constants"
+	"clean-architecture-api/infrastructure"
+	"clean-architecture-api/lib"
 )
 
 // UserRoutes struct

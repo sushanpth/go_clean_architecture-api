@@ -1,7 +1,7 @@
 package infrastructure
 
 import (
-	"clean-architecture/lib"
+	"clean-architecture-api/lib"
 	"fmt"
 
 	"gorm.io/driver/mysql"

@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"clean-architecture/lib"
+	"clean-architecture-api/lib"
 	"math/rand"
 	"time"
 

@@ -1,11 +1,11 @@
 package console
 
 import (
-	"clean-architecture/api/middlewares"
-	"clean-architecture/api/routes"
-	"clean-architecture/infrastructure"
-	"clean-architecture/lib"
-	"clean-architecture/seeds"
+	"clean-architecture-api/api/middlewares"
+	"clean-architecture-api/api/routes"
+	"clean-architecture-api/infrastructure"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/seeds"
 	"time"
 
 	"github.com/getsentry/sentry-go"

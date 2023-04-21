@@ -1,7 +1,7 @@
 package services
 
 import (
-	"clean-architecture/lib"
+	"clean-architecture-api/lib"
 	"context"
 	"io"
 	"net/url"

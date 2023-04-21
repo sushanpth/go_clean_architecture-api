@@ -1,7 +1,7 @@
 package models
 
 import (
-	"clean-architecture/lib"
+	"clean-architecture-api/lib"
 	"database/sql"
 	"time"
 

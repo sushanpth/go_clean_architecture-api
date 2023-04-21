@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"clean-architecture/constants"
+	"clean-architecture-api/constants"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

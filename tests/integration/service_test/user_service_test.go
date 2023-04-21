@@ -1,9 +1,9 @@
 package service_test
 
 import (
-	"clean-architecture/models"
-	"clean-architecture/services"
-	"clean-architecture/tests/setup"
+	"clean-architecture-api/models"
+	"clean-architecture-api/services"
+	"clean-architecture-api/tests/setup"
 	"log"
 	"testing"
 

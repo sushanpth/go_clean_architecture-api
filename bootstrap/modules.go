@@ -1,14 +1,14 @@
 package bootstrap
 
 import (
-	"clean-architecture/api/controllers"
-	"clean-architecture/api/middlewares"
-	"clean-architecture/api/routes"
-	"clean-architecture/infrastructure"
-	"clean-architecture/lib"
-	"clean-architecture/repository"
-	"clean-architecture/seeds"
-	"clean-architecture/services"
+	"clean-architecture-api/api/controllers"
+	"clean-architecture-api/api/middlewares"
+	"clean-architecture-api/api/routes"
+	"clean-architecture-api/infrastructure"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/repository"
+	"clean-architecture-api/seeds"
+	"clean-architecture-api/services"
 
 	"go.uber.org/fx"
 )

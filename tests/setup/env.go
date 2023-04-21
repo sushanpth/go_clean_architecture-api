@@ -1,7 +1,7 @@
 package setup
 
 import (
-	"clean-architecture/lib"
+	"clean-architecture-api/lib"
 	"fmt"
 	"os"
 	"strings"

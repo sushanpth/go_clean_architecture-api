@@ -2,11 +2,11 @@ package middlewares
 
 import (
 	"bytes"
-	"clean-architecture/api/responses"
-	"clean-architecture/api_errors"
-	"clean-architecture/constants"
-	"clean-architecture/lib"
-	"clean-architecture/services"
+	"clean-architecture-api/api/responses"
+	"clean-architecture-api/api_errors"
+	"clean-architecture-api/constants"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/services"
 	"context"
 	"fmt"
 	"image"

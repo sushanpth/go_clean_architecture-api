@@ -1,7 +1,7 @@
 package controllers_test
 
 import (
-	"clean-architecture/tests/setup"
+	"clean-architecture-api/tests/setup"
 	"os"
 	"testing"
 

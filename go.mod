@@ -1,4 +1,4 @@
-module clean-architecture
+module clean-architecture-api
 
 go 1.20
 

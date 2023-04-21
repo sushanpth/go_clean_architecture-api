@@ -1,7 +1,7 @@
 package main
 
 import (
-	"clean-architecture/bootstrap"
+	"clean-architecture-api/bootstrap"
 
 	"github.com/joho/godotenv"
 )

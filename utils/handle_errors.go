@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"clean-architecture/api_errors"
-	"clean-architecture/lib"
+	"clean-architecture-api/api_errors"
+	"clean-architecture-api/lib"
 	"errors"
 	"net/http"
 	"reflect"

@@ -1,8 +1,8 @@
 package console
 
 import (
-	"clean-architecture/console/commands"
-	"clean-architecture/lib"
+	"clean-architecture-api/console/commands"
+	"clean-architecture-api/lib"
 	"context"
 
 	"github.com/spf13/cobra"

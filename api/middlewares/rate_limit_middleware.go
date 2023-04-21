@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"clean-architecture/constants"
-	"clean-architecture/lib"
+	"clean-architecture-api/constants"
+	"clean-architecture-api/lib"
 	"net/http"
 	"strconv"
 	"time"

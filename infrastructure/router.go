@@ -1,7 +1,7 @@
 package infrastructure
 
 import (
-	"clean-architecture/lib"
+	"clean-architecture-api/lib"
 	"net/http"
 
 	"github.com/getsentry/sentry-go"

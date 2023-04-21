@@ -1,9 +1,9 @@
 package setup
 
 import (
-	"clean-architecture/api/middlewares"
-	"clean-architecture/api/routes"
-	"clean-architecture/lib"
+	"clean-architecture-api/api/middlewares"
+	"clean-architecture-api/api/routes"
+	"clean-architecture-api/lib"
 	"context"
 	"log"
 	"os"

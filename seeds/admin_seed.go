@@ -1,9 +1,9 @@
 package seeds
 
 import (
-	"clean-architecture/constants"
-	"clean-architecture/lib"
-	"clean-architecture/services"
+	"clean-architecture-api/constants"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/services"
 
 	"github.com/gin-gonic/gin"
 )

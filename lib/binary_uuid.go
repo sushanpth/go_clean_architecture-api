@@ -1,7 +1,7 @@
 package lib
 
 import (
-	"clean-architecture/api_errors"
+	"clean-architecture-api/api_errors"
 	"database/sql/driver"
 	"errors"
 	"fmt"

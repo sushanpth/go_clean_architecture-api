@@ -1,8 +1,8 @@
 package setup
 
 import (
-	"clean-architecture/infrastructure"
-	"clean-architecture/lib"
+	"clean-architecture-api/infrastructure"
+	"clean-architecture-api/lib"
 	"log"
 	"testing"
 

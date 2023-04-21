@@ -1,9 +1,9 @@
 package controllers_test
 
 import (
-	"clean-architecture/api/controllers"
-	"clean-architecture/lib"
-	"clean-architecture/tests/setup"
+	"clean-architecture-api/api/controllers"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/tests/setup"
 	"log"
 	"net/http"
 	"net/http/httptest"

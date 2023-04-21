@@ -1,13 +1,13 @@
 package controllers
 
 import (
-	"clean-architecture/api/responses"
-	"clean-architecture/api_errors"
-	"clean-architecture/constants"
-	"clean-architecture/lib"
-	"clean-architecture/models"
-	"clean-architecture/services"
-	"clean-architecture/utils"
+	"clean-architecture-api/api/responses"
+	"clean-architecture-api/api_errors"
+	"clean-architecture-api/constants"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/models"
+	"clean-architecture-api/services"
+	"clean-architecture-api/utils"
 
 	"github.com/gin-gonic/gin"
 )

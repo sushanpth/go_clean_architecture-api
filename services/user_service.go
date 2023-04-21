@@ -1,9 +1,9 @@
 package services
 
 import (
-	"clean-architecture/lib"
-	"clean-architecture/models"
-	"clean-architecture/repository"
+	"clean-architecture-api/lib"
+	"clean-architecture-api/models"
+	"clean-architecture-api/repository"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
