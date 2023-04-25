@@ -7,4 +7,5 @@ import (
 // Module exported for initializing application
 var Module = fx.Options(
 	fx.Provide(NewUserController),
+	fx.Provide(NewCategoryController),
 )
