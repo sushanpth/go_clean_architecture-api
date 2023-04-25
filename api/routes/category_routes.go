@@ -32,4 +32,5 @@ func (s *CategoryRoutes) Setup() {
 	api := s.handler.Group("/api")
 
 	api.GET("/category", s.paginationMiddleware.Handle(), s.categoryController.GetCategory)
+	api.POST("/category", s.categoryController.CreateCategory)
 }

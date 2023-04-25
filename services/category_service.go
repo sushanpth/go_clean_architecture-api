@@ -37,3 +37,7 @@ func (c CategoryService) GetAll() (map[string]interface{}, error) {
 	}
 	return gin.H{"data": categories, "count": count}, nil
 }
+
+func (c CategoryService) Create(category models.Category) error {
+	return c.repository.Create(&category).Error
+}
