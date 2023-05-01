@@ -8,4 +8,5 @@ import (
 var Module = fx.Options(
 	fx.Provide(NewUserController),
 	fx.Provide(NewCategoryController),
+	fx.Provide(NewBusinessController),
 )

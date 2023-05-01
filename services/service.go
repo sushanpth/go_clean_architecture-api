@@ -10,4 +10,5 @@ var Module = fx.Options(
 	fx.Provide(NewBucketService),
 	fx.Provide(NewUserService),
 	fx.Provide(NewCategoryService),
+	fx.Provide(NewBusinessService),
 )
