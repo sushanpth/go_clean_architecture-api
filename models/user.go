@@ -15,6 +15,7 @@ type User struct {
 	Name         string         `json:"name" form:"name"`
 	Email        string         `json:"email" form:"email"`
 	Age          int            `json:"age" form:"age"`
+	Password     string         `json:"_" form:"password"`
 	Birthday     *time.Time     `json:"time"`
 	MemberNumber sql.NullString `json:"member_number"`
 	ProfilePic   lib.SignedURL  `json:"profile_pic"`

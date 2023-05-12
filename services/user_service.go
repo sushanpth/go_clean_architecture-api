@@ -6,6 +6,7 @@ import (
 	"clean-architecture-api/repository"
 
 	"github.com/gin-gonic/gin"
+	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )
 
@@ -67,7 +68,17 @@ func (s UserService) DeleteUser(uuid lib.BinaryUUID) error {
 	return s.repository.Where("id = ?", uuid).Delete(&models.User{}).Error
 }
 
-// DeleteUser deletes the user
+// Create creates a new user
 func (s UserService) Create(user *models.User) error {
 	return s.repository.Create(&user).Error
+}
+
+func (s UserService) HashPassword(password string) (string, error) {
+	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
+	return string(bytes), err
+}
+
+func (s UserService) CompareHashAndPassword(password, hash string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+	return err != nil
 }
