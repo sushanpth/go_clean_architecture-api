@@ -4,8 +4,13 @@ import (
 	"clean-architecture-api/lib"
 	"clean-architecture-api/models"
 	"clean-architecture-api/repository"
+	"errors"
+	"fmt"
+	"os"
+	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )
@@ -45,6 +50,11 @@ func (s UserService) GetOneUser(userID lib.BinaryUUID) (user models.User, err er
 	return user, s.repository.First(&user, "id = ?", userID).Error
 }
 
+// GetUserByEmail gets one user by email
+func (s UserService) GetUserByEmail(email string) (user models.User, err error) {
+	return user, s.repository.First(&user, "Email = ?", email).Error
+}
+
 // GetAllUser get all the user
 func (s UserService) GetAllUser() (response map[string]interface{}, err error) {
 	var users []models.User
@@ -78,7 +88,48 @@ func (s UserService) HashPassword(password string) (string, error) {
 	return string(bytes), err
 }
 
-func (s UserService) CompareHashAndPassword(password, hash string) bool {
+func (s UserService) CompareHashAndPassword(hash, password string) bool {
 	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
-	return err != nil
+	if err != nil {
+		s.logger.Error(err)
+		return false
+	}
+	return true
+}
+
+func (s UserService) GenerateJWTToken(user models.User) (string, error) {
+	// Generate a JWT token
+	// Create a new token object, specifying signing method and the claims
+	// you would like it to contain.
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"userID": user.ID,
+		"email":  user.Email,
+		"iat":    time.Now().Unix(),
+		"exp":    time.Now().Add(time.Hour * 24 * 30).Unix(),
+	})
+
+	// Sign and get the complete encoded token as a string using the secret
+	tokenString, err := token.SignedString([]byte(os.Getenv("JWT_SECRET")))
+
+	return tokenString, err
+}
+
+func (s UserService) ValidateJWTToken(tokenString string) (jwt.MapClaims, error) {
+	// decode and validate
+	// Parse takes the token string and a function for looking up the key.
+	token, _ := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
+		// Don't forget to validate the alg is what you expect:
+		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
+			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
+		}
+
+		// hmacSampleSecret is a []byte containing your secret, e.g. []byte("my_secret_key")
+		return []byte(os.Getenv("JWT_SECRET")), nil
+	})
+
+	if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
+		return claims, nil
+	}
+
+	return nil, errors.New("failed to decode token")
 }
